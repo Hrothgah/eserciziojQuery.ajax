@@ -7,34 +7,29 @@
 	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lemonada" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
-	
+
 
 	<title>Registrazione</title>
 
 	<!--  -->
 
 	<style>
-   
+        body {
+            color: white;
+            text-align: center;
+        }
+
 	</style>
 
 </head>
 
 <body>
-    
+
     <h1>Database Utenti</h1>
 
 	<div class="container">
-    
-	    <!--<form>
-            <label for="nome">Nome:</label>
-	        <input id="nome" type="text" name="nome" value="" placeholder="Inserisci il nome">
-	        <label for="cognome">Cognome: </label>
-	        <input id="cognome" type="text" name="cognome" value="" placeholder="Inserisci il cognome">
-	        <label for="Email">Email: </label>
-	        <input id="email" type="text" name="email" value="" placeholder="Inserisci la mail">
-	        <button id="invia">Registra Utente</button>
-			<button type="button" data-toggle="modal" data-target="#modaleRicerca">Ricerca utente</button>
-	    </form>-->
+
+
 		<form class="form-inline">
 			<div class="input-group">
 				<div class="input-group-addon">Nome</div>
@@ -52,8 +47,8 @@
 			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modaleRicerca">Ricerca utente</button>
 		</form>
     </div>
-	
-	
+
+
 	<div id="vuoto">
 	    <table id="tabella" class="table table-hover">
             <tr>
@@ -65,7 +60,7 @@
             </tr>
 	    </table>
 	</div>
-	
+
 	<div class="modal fade bs-example-modal-lg" id="modaleRicerca" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -106,7 +101,7 @@
 	<script src="script/leggi.js"></script>
 	<script src="script/scrivi.js"></script>
 	<script src="script/cerca.js"></script>
-	
+
 </body>
 
 </html>
