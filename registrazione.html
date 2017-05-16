@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lemonada" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	
+
+	<title>Registrazione</title>
+
+	<!--  -->
+
+	<style>
+   
+	</style>
+
+</head>
+
+<body>
+    
+    <h1>Database Utenti</h1>
+
+	<div class="container">
+    
+	    <!--<form>
+            <label for="nome">Nome:</label>
+	        <input id="nome" type="text" name="nome" value="" placeholder="Inserisci il nome">
+	        <label for="cognome">Cognome: </label>
+	        <input id="cognome" type="text" name="cognome" value="" placeholder="Inserisci il cognome">
+	        <label for="Email">Email: </label>
+	        <input id="email" type="text" name="email" value="" placeholder="Inserisci la mail">
+	        <button id="invia">Registra Utente</button>
+			<button type="button" data-toggle="modal" data-target="#modaleRicerca">Ricerca utente</button>
+	    </form>-->
+		<form class="form-inline">
+			<div class="input-group">
+				<div class="input-group-addon">Nome</div>
+					<input type="text" class="form-control" id="nome" placeholder="Nome">
+			</div>
+			<div class="input-group">
+				<div class="input-group-addon">Cognome</div>
+					<input type="text" class="form-control" id="cognome" placeholder="Cognome">
+			</div>
+			<div class="input-group">
+				<div class="input-group-addon">@</div>
+					<input type="text" class="form-control" id="email" placeholder="Email">
+			</div>
+			<button id="invia" class="btn btn-success">Registra Utente</button>
+			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modaleRicerca">Ricerca utente</button>
+		</form>
+    </div>
+	
+	
+	<div id="vuoto">
+	    <table id="tabella" class="table table-hover">
+            <tr>
+                <th>ID<img id="SortId" src="img/sorting.png"></th>
+                <th>NOME<img id="SortNam" src="img/sorting.png"></th>
+                <th>COGNOME<img id="SortCog" src="img/sorting.png"></th>
+                <th>EMAIL<img id="SortMail" src="img/sorting.png"></th>
+				<th>Elimina</th>
+            </tr>
+	    </table>
+	</div>
+	
+	<div class="modal fade bs-example-modal-lg" id="modaleRicerca" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel" style="text-align:center;">Seleziona un campo e inserisci un valore per effettuare la ricerca</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="formRicerca">
+                            <form class="searchForm">
+								<div class="form-group">
+									<select class="form-control">
+										<option class="ambito">Nome</option>
+										<option class="ambito">Cognome</option>
+										<option class="ambito">Email</option>
+									</select>
+								</div>
+								<input id="testoR" type="text" name="testo" value="" class="form-control">
+								<button type="button" id="ricerca" class="btn btn-success">Cerca</button>
+								<button type="button" data-dismiss="modal" class="btn btn-danger">Chiudi</button>
+							</form>
+                        </div>
+				        <table id="tabellaR" class="table table-striped">
+				            <tr>
+				                <th>ID</th>
+								<th>NOME</th>
+								<th>COGNOME</th>
+								<th>EMAIL</th>
+				            </tr>
+				        </table>
+                    </div>
+				</div>
+            </div>
+        </div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script src="script/leggi.js"></script>
+	<script src="script/scrivi.js"></script>
+	<script src="script/cerca.js"></script>
+	
+</body>
+
+</html>
